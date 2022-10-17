@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+
+import AgregarUsuario from './Agregar-usuario'
+import EditarUsuario from './Editar-usuario';
+import ListaUsuarios from './Lista-usuarios'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>
           Coffe River  
         </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<ListaUsuarios/>} exact></Route>
+            <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route>
+            <Route path='/editarUsuario' element={<EditarUsuario/>} exact></Route>
+          </Routes>
+        </BrowserRouter>
+        
+        
+        
     </div>
   );
 }
