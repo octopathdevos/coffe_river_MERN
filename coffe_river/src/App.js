@@ -18,7 +18,7 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a className="nav-link active" aria-current="page" href="/">Inicio</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="agregarusuario">Agregar Usuario</a>
@@ -34,7 +34,7 @@ function App() {
           <Routes>
             <Route path='/' element={<ListaUsuarios/>} exact></Route>
             <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route>
-            <Route path='/editarUsuario' element={<EditarUsuario/>} exact></Route>
+            <Route path='/editarUsuario/:idusuario' element={<EditarUsuario/>} exact></Route>
           </Routes>
         </BrowserRouter>
         

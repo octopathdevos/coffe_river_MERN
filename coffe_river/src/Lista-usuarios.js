@@ -17,20 +17,18 @@ function ListaUsuarios(){
     }, [])
     
 //mapear lista de usuario en objeto de usuario
-
-const listausuarios = datausuarios.map(usuario=>{
-    return(
-        <div>
-            <UsuarioIndividual usuario={usuario} />
-        </div>
-    )
-})
-
+    const listadeusuarios = datausuarios.map(usuario=>{
+        return(
+            <div >
+                <UsuarioIndividual usuario={usuario}/>
+            </div>
+        )
+    })
 
     return (
         <div>
             <h2>Lista de Usuarios</h2>
-            {listausuarios}
+            {listadeusuarios}
         </div>
     )
 }

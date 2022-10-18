@@ -16,9 +16,9 @@ module.exports = router
 
 //ruta de prueba
 
-// router.get('/ejemplo',(req,res)=>{
-//     res.end('saludo carga desde ruta ejemplo')
-// })
+router.get('/ejemplo',(req,res)=>{
+    res.end('saludo carga desde ruta ejemplo')
+})
 
 //agregar usuario
 router.post('/agregarusuario',(req,res)=>{
@@ -41,6 +41,18 @@ router.post('/agregarusuario',(req,res)=>{
 
 router.get('/obtenerusuarios',(req, res)=>{
     ModeloUsuario.find({},function(docs, err){
+        if(!err){
+            res.send(docs)
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+//obtener data de usuario
+
+router.post('/obtenerdatausuario',(req, res)=>{
+    ModeloUsuario.find({idusuario:req.body.idusuario},function(docs, err){
         if(!err){
             res.send(docs)
         }else{

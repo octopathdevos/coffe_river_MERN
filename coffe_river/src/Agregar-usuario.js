@@ -16,7 +16,7 @@ function AgregarUsuario(){
             nombre: nombre,
             email: email,
             telefono: telefono,
-            idusuario: uniqid()
+            idUsuario: uniqid()
         }
 
         console.log(Usuario)
