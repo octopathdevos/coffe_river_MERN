@@ -10,6 +10,8 @@ function EditarUsuario(){
     const[nombre, setNombre]=useState('')
     const[email, setEmail]=useState('')
     const[telefono, setTelefono]=useState('')
+
+    //para probar nueva rama
     
     useEffect(()=>{
         axios.post('/api/usuario/obtenerdatausuario',{idusuario:params.idusuario}).then(res =>{
