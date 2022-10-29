@@ -2,9 +2,12 @@ import './App.css';
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
-import AgregarUsuario from './Agregar-usuario'
-import EditarUsuario from './Editar-usuario';
-import ListaUsuarios from './Lista-usuarios'
+import AgregarUsuario from '../src/components/Agregar-usuario';
+import EditarUsuario from '../src/components/Editar-usuario';
+import Inicio from './components/Inicio';
+import ListaUsuarios from '../src/components/Lista-usuarios';
+import NuestrosProductos from '../src/components/Nuestros-Productos';
+import QuienesSomos from '../src/components/Quienes-somos';
 
 function App() {
   return (
@@ -21,7 +24,10 @@ function App() {
                 <a className="nav-link active" aria-current="page" href="/">Inicio</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="agregarusuario">Agregar Usuario</a>
+                <a className="nav-link" href="quienesSomos">Quienes Somos</a>
+              </li>
+              <li className="nav-item test">
+                <a className="nav-link" href="nuestrosProductos">Nuestros Productos</a>
               </li>
             </ul>
 
@@ -32,8 +38,11 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<ListaUsuarios/>} exact></Route>
-            <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route>
+            <Route path='/' element={<Inicio/> } exact ></Route>
+            <Route path='/quienesSomos' element={<QuienesSomos/> } exact ></Route>
+            <Route path='/nuestrosProductos' element={<NuestrosProductos/>} exact></Route>
+            <Route path='/listaUsuarios' element={<ListaUsuarios/>} exact></Route>
+            {/* <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route> */}
             <Route path='/editarUsuario/:idusuario' element={<EditarUsuario/>} exact></Route>
           </Routes>
         </BrowserRouter>
