@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Roboto;
 }
 
 .App-logo {
@@ -35,4 +36,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.imgLogo{
+  width: 60%;
+}
+.LogoMenu{
+  background-color: blue;
+  
 }

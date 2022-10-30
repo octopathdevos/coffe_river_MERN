@@ -1,21 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 import axios from 'axios'
 import uniqid from 'uniqid'
 
-function AgregarUsuario(){
+function AgregarProducto(){
     
     //hooks 
     const[nombre, setNombre]=useState('')
-    const[email, setEmail]=useState('')
-    const[telefono, setTelefono]=useState('')
+    const[precio, setPrecio]=useState('')
+    const[stock, setStock]=useState('')
  
 
-    function agregarUsuario(){
+    function agregarProducto(){
         var Usuario ={
             nombre: nombre,
-            email: email,
-            telefono: telefono,
+            Precio: precio,
+            Stock: stock,
             idUsuario: uniqid()
         }
 
@@ -35,7 +35,7 @@ function AgregarUsuario(){
         <div className='container'>
             <div className='row'>
                 <div className='col-sm-6 offset-3'>
-                    <h2>Crear un Nuevo Usuario</h2>                 
+                    <h2>Crear un Nuevo Producto</h2>                 
                 </div>
             </div>
             <div className='row'>
@@ -49,22 +49,22 @@ function AgregarUsuario(){
             <div className='row'>
                     <div className='col-sm-6 offset-3'>
                            <div className='mb-3'>
-                                <label htmlFor='email'>e-mail</label>
-                                <input type='email' className='form-control' value={email} onChange={(e)=>{setEmail(e.target.value)}}></input>
+                                <label htmlFor='Precio'>Precio</label>
+                                <input type='Precio' className='form-control' value={precio} onChange={(e)=>{setPrecio(e.target.value)}}></input>
                            </div>
                     </div>
             </div>
             <div className='row'>
                     <div className='col-sm-6 offset-3'>
                            <div className='mb-3'>
-                                <label htmlFor='telefono'>telefono</label>
-                                <input type='text' className='form-control' value={telefono} onChange={(e)=>{setTelefono(e.target.value)}}></input>
+                                <label htmlFor='telefono'>Stock</label>
+                                <input type='text' className='form-control' value={stock} onChange={(e)=>{setStock(e.target.value)}}></input>
                            </div>
                     </div>
             </div>
-            <button onClick={agregarUsuario} className='btn btn-success'>Guardar Usuario</button>
+            <button onClick={agregarProducto} className='btn btn-success'>Guardar Producto Nuevo</button>
         </div>
 
     )
 }
-export default AgregarUsuario
+export default AgregarProducto
