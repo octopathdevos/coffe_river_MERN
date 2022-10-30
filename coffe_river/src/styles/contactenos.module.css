@@ -1,0 +1,20 @@
+#botonenviarformulario{
+    text-decoration: none;
+    background: #25110B;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    border: none;
+  
+  }
+  #botonenviarformulario:hover{
+    background: #dddddd;
+    border-radius: 0px;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    color: #25110B;
+  }
+  .imageninicio{
+    width: 100%;
+    
+  }

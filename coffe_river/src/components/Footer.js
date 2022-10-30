@@ -7,8 +7,8 @@ function Footer() {
 
       <nav>
         <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-6">
+          
+          <div className="col-md-6 offset-md-2">
             <br />
             <a className={footerStyles.Botonfooter} href="#">
               Mi Perfil
@@ -26,9 +26,10 @@ function Footer() {
               Contactenos
             </a>
           </div>
-          <div class="col-md-2">
-            <br />
+          <div className="col-md-2 ">
+            <a>
             <img className={footerStyles.LogoFooter} src="./Assets/Logo/LogoMenuWhite.png" />
+            </a>
           </div>
         </div>
       </nav>

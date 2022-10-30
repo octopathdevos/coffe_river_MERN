@@ -3,9 +3,9 @@
 function Inicio(){
     return(
         <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6 offset-md-2">
           <h1 className="h1">Quienes Somos</h1>
-          <p class="justify">
+          <p className="text-justify text-center">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation

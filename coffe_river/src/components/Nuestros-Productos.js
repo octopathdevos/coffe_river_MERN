@@ -1,4 +1,4 @@
-import nuestrosCss from  '../styles/Nuestros-Productos.module.css';
+import nuestrosCss from  '../styles/productos/Nuestros-Productos.module.css';
 
 function NuestrosProductos(){
     return(
