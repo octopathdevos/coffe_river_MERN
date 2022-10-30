@@ -1,3 +1,5 @@
+
+
 function Inicio(){
     return(
         <div class="row">
@@ -25,7 +27,7 @@ function Inicio(){
         <div class="col-md-4">
           <img
             className="background/imagen-inicio.png"
-            src="imagen-inicio.png"
+            src="./Assets/background/imagen-inicio.png"
             alt="correriverinicio"
           />
         </div>

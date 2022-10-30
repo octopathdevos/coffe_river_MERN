@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Roboto;
 }
 
 .App-logo {
@@ -37,6 +38,10 @@
   }
 }
 
-.test{
-  background-color: #61dafb;
+.imgLogo{
+  width: 60%;
+}
+.LogoMenu{
+  background-color: blue;
+  
 }
