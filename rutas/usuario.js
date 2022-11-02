@@ -4,21 +4,19 @@ const router = express.Router()
 
 const mongoose = require('mongoose')
 
-const eschemausuario = mongoose.Schema({
+const eschema = mongoose.Schema
+
+
+const eschemausuario = new eschema({
     nombre: String,
     email: String,
     telefono: String,
     idUsuario: String
 })
 
+
 const ModeloUsuario = mongoose.model('usuarios', eschemausuario)
 module.exports = router
-
-//ruta de prueba
-
-router.get('/ejemplo',(req,res)=>{
-    res.end('saludo carga desde ruta ejemplo')
-})
 
 //agregar usuario
 router.post('/agregarusuario',(req,res)=>{
@@ -52,7 +50,7 @@ router.get('/obtenerusuarios',(req, res)=>{
 //obtener data de usuario
 
 router.post('/obtenerdatausuario',(req, res)=>{
-    ModeloUsuario.find({idusuario:req.body.idusuario},function(docs, err){
+    ModeloUsuario.find({idUsuario:req.body.idUsuario},function(docs, err){
         if(!err){
             res.send(docs)
         }else{

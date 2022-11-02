@@ -9,6 +9,7 @@ const archivoBD = require('./conexion')
 //importacion del archivo de rutas y modelo de usuario
 
 const rutausuario = require('./rutas/usuario')
+const rutaproducto = require('./rutas/producto')
 
 //importacion body parser
 
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({extended:'true'}))
 
 
 app.use('/api/usuario',rutausuario)
+app.use('/api/producto',rutaproducto)
 
 
 app.get('/',(req,res)=>{

@@ -12,15 +12,15 @@ function AgregarProducto(){
  
 
     function agregarProducto(){
-        var Usuario ={
+        var Producto ={
             nombre: nombre,
-            Precio: precio,
-            Stock: stock,
-            idUsuario: uniqid()
+            precio: precio,
+            stock: stock,
+            idProducto: uniqid()
         }
 
-        console.log(Usuario)
-        axios.post('/api/usuario/agregarusuario',Usuario)
+        
+        axios.post('/api/producto/agregarproducto', Producto)
         .then(res => {
             alert(res.data)
         })
