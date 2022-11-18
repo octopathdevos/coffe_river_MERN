@@ -14,9 +14,9 @@ function EditarUsuario(){
     //para probar nueva rama
     
     useEffect(()=>{
-        axios.post('/api/usuario/obtenerdatausuario',{idusuario:params.idusuario}).then(res =>{
-            console.log(res.data[0])
+        axios.post('/api/usuario/obtenerdatausuario',{idUsuario: params.idusuario}).then(res =>{
             const datausuario = res.data[0]
+            console.log(res)
             setNombre(datausuario.nombre)
             setEmail(datausuario.email)
             setTelefono(datausuario.telefono)

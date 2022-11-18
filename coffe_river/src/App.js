@@ -2,13 +2,14 @@ import './App.css';
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
-import AgregarProdcuto from './components/productos/Agregar-Producto';
 import AgregarProducto from './components/productos/Agregar-Producto';
 import AgregarUsuario from './components/usuarios/Agregar-usuario';
 import Contactenos from './components/contactenos';
+import EditarProducto from './components/productos/Editar-Productos';
 import EditarUsuario from './components/usuarios/Editar-usuario';
 import Footer from './components/Footer';
 import Inicio from './components/Inicio';
+import ListaProductos from './components/productos/Lista-Productos';
 import ListaUsuarios from '../src/components/usuarios/Lista-usuarios';
 import Login from './components/Login';
 import NuestrosProductos from '../src/components/Nuestros-Productos';
@@ -42,9 +43,7 @@ function App() {
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/agregarProducto">Agregar Producto</a></li>
-                  <li><a class="dropdown-item" href="/listaUsuarios">Lista Productos</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="/editarUsuario/:idusuario">Editar Producto</a></li>
+                  <li><a class="dropdown-item" href="/listaProductos">Lista Productos</a></li>
                 </ul>
               </li> 
               <li class="nav-item dropdown">
@@ -54,8 +53,6 @@ function App() {
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/agregarUsuario">Agregar Usuario</a></li>
                   <li><a class="dropdown-item" href="/listaUsuarios">Lista Usuarios</a></li>
-                  <li><hr class="dropdown-divider"/></li>
-                  <li><a class="dropdown-item" href="/editarUsuario/:idusuario">Editar Usuario</a></li>
                 </ul>
               </li> 
               <li className="nav-item">
@@ -79,9 +76,11 @@ function App() {
             <Route path='/quienesSomos' element={<QuienesSomos/> } exact ></Route>
             <Route path='/nuestrosProductos' element={<NuestrosProductos/>} exact></Route>
             <Route path='/listaUsuarios' element={<ListaUsuarios/>} exact></Route>
+            <Route path='/listaProductos' element={<ListaProductos/>} exact></Route>
             <Route path='/agregarUsuario' element={<AgregarUsuario/>} exact></Route>
             <Route path='/agregarProducto' element={<AgregarProducto/>} exact></Route>
             <Route path='/editarUsuario/:idusuario' element={<EditarUsuario/>} exact></Route>
+            <Route path='/editarProducto/:idproducto' element={<EditarProducto/>} exact></Route>
           </Routes>
         </BrowserRouter>
         
